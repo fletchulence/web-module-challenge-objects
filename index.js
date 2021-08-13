@@ -60,7 +60,6 @@ const burger = {
   discount: function(person){
     if (person === 'student' || person === 'teacher'){
       return this.price * 0.75;
-      
     }else if (person === 'public') {
       return this.price * 0.9;
     }
@@ -111,11 +110,18 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 function addReview(array, name, rating, feedback){
-  const newArray = [];
-/*   Object = {name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }
- */
   
+   const newReview = {
+     name: name,
+     rating: rating,
+     feedback: feedback,
+   };
+   array.push(newReview);
+   
+return array;
 }
+/* console.log(addReview()) */
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
